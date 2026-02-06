@@ -1,0 +1,12 @@
+# Ignore all executables
+*.exe
+
+# Ignore object files
+*.o
+*.out
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore logs
+*.log
