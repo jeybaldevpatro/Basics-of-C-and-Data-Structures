@@ -1,4 +1,6 @@
-/*#include<stdio.h>     //format
+                            /********** THEORY & CONCEPTS **********/
+
+/*#include<stdio.h>     //Format
 int main(){
     
     return 0;
@@ -7,16 +9,15 @@ int main(){
 /*#include<stdio.h>
 int main(){
     printf("\njey baldev\'s computer\n");
-    printf("\nsdaufhdfjh");     //if i add \n after jh then the output will be same  
+    printf("\nB.TECH STUDENT");     //if i add \n after STUDENT then the output will be same only extra blank line is added after that.
     return 0;
 }*/
 
 /*#include<stdio.h>
 int main(){
-    int a=8;        //u can also write like this int a; //if we use float instead of int then in output it will give GARBAGE VALUE(random).
-                    //                           a=8;
+    int a=8;        //u can also write like this int a; then a=8(in next line); //if we use float instead of int then in output it will give GARBAGE VALUE(random).
     printf("The output of the program is %d", a);
-    return 0; 
+    return 0;
 }*/
 
 /*#include<stdio.h>
@@ -26,7 +27,6 @@ int main(){     //%d expects an int, but when you pass a char to printf, it is a
     return 0; 
 }*/
 
-
 /*#include<stdio.h>
 int main(){
     int a;
@@ -35,7 +35,11 @@ int main(){
     return 0; 
 }*/
 
-/*#include<stdio.h>     //Q.1.a)
+                        /***CHAPTER 1 - PRACTICE SET***/
+
+/*--------- PROGRAM 1: Area of rectangle ---------*/
+
+/*#include<stdio.h>     // a)Using hard coded inputs.
 int main(){
     int l=8;
     int b=3;
@@ -44,8 +48,7 @@ int main(){
     printf("Area of rectangle is %d",area);
     return 0;
 }
-
-/*#include<stdio.h>     //Q.1.b)
+/*#include<stdio.h>     // b)Using inputs supplied by the user.
 int main(){
     int a;
     int b;
@@ -57,14 +60,17 @@ int main(){
     return 0;
 }*/
 
-/*#include<stdio.h>     //Q.2     Solve this question by scanf and math.h
+/*--------- PROGRAM 2: Area of circle & cylinder ---------*/
+
+/*#include<stdio.h>     //Solve this question by scanf and math.h
 int main(){
     float pie=3.14,area,volume;
     int r=2,h=5;
     area=pie*r*r;
     volume=pie*r*r*h;
     printf("area of circle is %f\n",area);
-    printf("volume of cylinder is %f",volume);     //62.800003 this is my volume. Why i am getting 3 in the last? ask chatgpt.
+    printf("volume of cylinder is %f",volume);     //62.800003 this is my volume. Why i am getting 3 in the last?In C, float stores numbers in binary format, not decimal.
+                                                   //The value 3.14 cannot be represented exactly in binary, so it is stored as a nearby approximation. Avoid this by using %.2f,double,M_PI
     return 0;
 }*/
 
@@ -81,7 +87,9 @@ int main(){
     return 0;
 }*/
 
-/*#include<stdio.h>       //Q.3
+/*--------- PROGRAM 3: Convert Celsius to Fahrenheit ---------*/
+
+/*#include<stdio.h>
 int main(){
     float f,c;
     printf("celsius:");
@@ -91,12 +99,14 @@ int main(){
     return 0;
 }*/
 
+/*--------- PROGRAM 4: Calculate simple interest & compound interest ---------*/
+
 /*#include<stdio.h>
 #include<math.h>
 int main(){
     float p,r,t;  //took 5012,6,8
     float si;
-    scanf("%f %f %f",&p,&r,&t);   //learnt a new thing what if there is ',','#',spaces,no spaces etc in between "%f%f%f" then how program will work.Try it is fun :).
+    scanf("%f %f %f",&p,&r,&t);   //learnt a new thing what if there is ',','#',spaces,no spaces etc in between "%f%f%f" then how program will work. Try, it is fun :).
     printf("simple interst is %f\n",(p*r*t)/100);
     printf("compound interst is %f",p*pow(1+(r/100),t)-p);  //actual answer 2973.28 acc. to chatgpt but we are getting 2976.366550 bcoz due to how floating-point numbers are stored in memory.
     return 0;
