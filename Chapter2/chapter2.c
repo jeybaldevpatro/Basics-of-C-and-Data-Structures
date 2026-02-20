@@ -1,3 +1,6 @@
+                            /**********  INSTRUCTIONS AND OPERATORS **********/
+
+                                        /**********Theory**********/
 /*#include<stdio.h>
 int main(){
     int i=10;
@@ -10,12 +13,12 @@ int main(){
 int main(){
     int a=9;
     int b=2;
-    float c=a/b;   // both a and b are int
-    printf("the value of c is %f",c);  //if u print this value will be 4.000000 not 4.500000 bcoz int and int gives int not float
-    return 0;
+    float c=a/b;                       // both a and b are int
+    printf("the value of c is %f",c);  // Since both operands are integers, integer division occurs (9/2 = 4).
+    return 0;                          // The result is then stored as 4.0 in float.
 }*/
 
-// To get exact value use float and int or float and float.See below.
+// To get the exact value, use float with int or float with float. To get decimal output, at least one operand must be float.See below.
 
 /*#include<stdio.h>
 int main(){
@@ -36,16 +39,24 @@ int main(){
     return 0;
 }*/
 
-/*#include<stdio.h>  //Q.2.
+                                /***CHAPTER 2 - PRACTICE SET***/
+
+/*--------- PROGRAM 2: What data type will 3.0/8-2 return ---------*/
+
+/*#include<stdio.h>
 int main(){
-    float a=3.0/8-2;
-    printf("The value of a is %f",a);
-    return 0;
+    float a=3.0/8-2;                   //First, it was divided and then subtracted (OPERATOR PRECEDENCE), so the value is -1.625
+    printf("The value of a is %f",a);  //The expression type is double; storing it in float a converts -1.625 from double to float.
+    return 0;                          //If you want float, write 3.0f (or cast), e.g. 3.0f/8 - 2, Because in C, a decimal literal like 3.0 is double by default, not float.
 }*/
 
-/*#include<stdio.h>  //Q.3.
+/*--------- PROGRAM 3:  A number is divisible by 97 or not ---------*/
+
+/*#include<stdio.h>
 int main(){
-    int a=26772;
+    int a;
+    printf("Enter a number: ");
+    scanf("%d", &a);
     if (a%97==0){
         printf("%d is divisible by 97\n", a);
     }else{
