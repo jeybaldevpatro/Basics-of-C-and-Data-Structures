@@ -1,14 +1,17 @@
+                            /**********  INSTRUCTIONS AND OPERATORS **********/
+
+                                        /********** Theory **********/
+
 /*#include<stdio.h>
 int main(){
-    int a=1, b=0; //I took a=2, b=12.Both the output showed 1 bcoz Both are non-zero, so in C they are treated as true in logical operations.
-    printf("The value of a and b is %d\n",a&&b); //so doesn't matter what values u take. Eg=a/b=00001,8,9,2,17,54,09 etc. 
-    printf("The value of a or b is %d",a||b);
+    int a=1, b=0;                                // If a=2, b=12, both the outputs showed 1 because both are non-zero, so both are considered true(1).
+    printf("The value of a and b is %d\n",a&&b); // a/b = 00001,8,9,2,17,54,09 etc. Will still show 1 because in C, any non-zero value is treated as true (1) in logical operations.Zero is treated as false (0). 
+    printf("The value of a or b is %d",a||b);    
     return 0;
 }*/
 
-/* If i take a/b= 08,09,018,019,00008 etc. Will show error bcoz In C, numbers starting with 0 are treated as octal (base 8) literals.
-Octal digits can only be 0 to 7, so 08,09,018,019,00008 etc is not a valid octal number — it will cause a compiler error.
-Check this code in history in chatgpt to understand properly.*/
+/*If i take a/b= 08,09,018,019,00008 etc. Will show error bcoz In C, numbers starting with 0 are treated as octal (base 8) literals.
+Octal digits can only be 0 to 7, so 08,09,018,019,00008 etc is not a valid octal number — it will cause a compiler error.*/
 
 /*#include<stdio.h>
 int main(){
@@ -18,7 +21,9 @@ int main(){
     }
     return 0;
 }
+
 //BOTH above and below program are SAME.
+
 #include<stdio.h>
 int main(){
     int a=1,b=1;
@@ -31,15 +36,17 @@ int main(){
 }*/
 
 //Conditional or Ternary operators.Can use instead of if-else.
+
 /*#include <stdio.h>
 int main(){
-    // condition ? expression-if-true : expression-if-false     This is the format.
+    // condition ? expression-if-true : expression-if-false     //This is the format.
     int a = 345;
-    int b= 345452;
+    int b = 345452;
     a>b?printf("a is greater"):printf("b is greater");
+    return 0;
 }*/
 
-//Q.convert this to conditional operator
+//Q. Convert this to conditional operator
 /*#include<stdio.h>
 int main(){
     int a=10;
@@ -51,6 +58,7 @@ int main(){
     }
     return 0;
 }
+
 //Ans
 #include<stdio.h>
 int main(){
@@ -59,7 +67,8 @@ int main(){
     return 0;
 }*/
 
-//switch case control instruction.Not in syllabus.
+//Switch case control instruction.
+
 /*#include <stdio.h>
 int main(){
     int a;
@@ -67,8 +76,8 @@ int main(){
     scanf("%d", &a);
     switch(a){
         case 1:
-            printf("You entered 1\n"); //if we do not use break function then it will print the furthur print statements.
-            break;                     //try this program by removing all break.
+            printf("You entered 1\n"); //By not using break function it will print the furthur print statements in other words If break is not used, execution continues to the next case (fall-through).
+            break;                     //Try this program by removing all break.
         case 2:
             printf("You entered 2\n");
             break;
@@ -79,16 +88,24 @@ int main(){
             printf("You entered 4\n");
             break;
         default:
-            printf("Nothing matched"); //if u take any number except 1,2,3,4 then this sentence is printed.
+            printf("Nothing matched"); //Take any number except 1,2,3,4 then this sentence is printed.
     }
     return 0;
 }*/
 
-/*#include<stdio.h>  //Quiz question in that pdf page=21.
+/*--------- Quick Quiz: Write a program to find grade of a student given his marks based on below: 
+                        90 – 100 => A 
+                        80 – 90 => B 
+                        70 – 80 => C 
+                        60 – 70 => D 
+                        50 – 60 => E 
+                        <50     => F  ---------*/
+
+/*#include<stdio.h>
 int main(){
     int marks;
     printf("Marks of a student:");
-    scanf("%d",marks);
+    scanf("%d",&marks);
     if(marks<=100 && marks>=90){
         printf("Grade is A");
     }
@@ -108,4 +125,38 @@ int main(){
         printf("Grade is F");
     }
         return 0;
+}*/
+
+//Better way to write above program.
+
+/*#include <stdio.h>
+int main() {
+    int marks;
+
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+
+    if (marks < 0 || marks > 100) {
+        printf("Invalid marks.\n");
+    }
+    else if (marks >= 90) {
+        printf("Grade: A\n");
+    }
+    else if (marks >= 80) {
+        printf("Grade: B\n");
+    }
+    else if (marks >= 70) {
+        printf("Grade: C\n");
+    }
+    else if (marks >= 60) {
+        printf("Grade: D\n");
+    }
+    else if (marks >= 50) {
+        printf("Grade: E\n");
+    }
+    else {
+        printf("Grade: F\n");
+    }
+
+    return 0;
 }*/
