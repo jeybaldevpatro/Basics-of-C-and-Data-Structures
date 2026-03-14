@@ -1,15 +1,23 @@
-/*int a = 10;  //Q.1.
-if (a = 11) 
+                                    /******** CHAPTER 3 - PRACTICE SET ********/
+
+/*--------- PROGRAM 1: Output of this program ---------*/
+
+/*int a = 10;
+if (a = 11)
 printf("I am 11"); 
-else  
+else
 printf("I am not 11");
 a = 11
 This does not compare.....it assigns the value 11 to a.
 The assignment expression itself returns the assigned value, i.e. 11.
 In C, any non-zero value is treated as true, and zero is treated as false.
-So if (a = 11) becomes if (11), which is true.So output is I am 11.*/
+So if (a = 11) becomes if (11), which is true.
+So output is I am 11. */
 
-/*#include<stdio.h>  //Q.2.my method. IMP question
+/*--------- PROGRAM 2: Whether a student has passed or failed ---------*/
+/*To pass, a student requires a total of 40% and at least 33% in each subject. Assume there are three subjects and take the marks as input from the user.*/
+
+/*#include<stdio.h>  //My method. IMP question
 int main(){
     int x,a,b,c;
     printf("Total marks and individual subject marks of a student:");
@@ -22,7 +30,9 @@ int main(){
     }
         return 0;
 }*/
+
 //Below is the correct method.
+
 /*#include <stdio.h>
 int main() {
     float sub1, sub2, sub3, total;
@@ -39,7 +49,9 @@ int main() {
     }
     return 0;
 }
+
 //Another method
+
 #include <stdio.h>
 int main() {
     float sub1, sub2, sub3;
@@ -60,7 +72,14 @@ int main() {
     return 0;
 }*/
 
-/*#include<stdio.h>      //Q.3. IMP question. my method
+/*--------- PROGRAM 3: Calculate income tax paid by an employee to the government as per the slabs mentioned below: 
+Income Slab               Tax
+2.5 – 5.0L                5%
+5.0L - 10.0L              20% 
+Above 10.0L               30%
+Note that there is no tax below 2.5L. Take income amount as an input from the user. ---------*/
+
+/*#include<stdio.h>      //IMP question. My method
 int main(){
     float incomeamount;
     printf("enter ur income in lakhs:");
@@ -106,7 +125,9 @@ int main() {
     return 0;
 }*/
 
-/*#include <stdio.h> //Q.4.
+/*--------- PROGRAM 4: Whether an year is leap or not ---------*/
+
+/*#include <stdio.h>
 int main(){
     int year; 
     printf("Enter year: \n");
@@ -121,7 +142,9 @@ int main(){
     return 0;
 }*/
 
-/*#include <stdio.h>  //Q.5. V.Imp
+/*--------- PROGRAM 5: Character entered by the user is lowercase or not ---------*/
+
+/*#include <stdio.h>  //V.Imp
 int main() {
     char ch;
     printf("Enter a character: ");
@@ -133,7 +156,9 @@ int main() {
     }
     return 0;
 }
+
 //Another method
+
 #include <stdio.h>
 int main(){
     char ch;
@@ -150,8 +175,9 @@ int main(){
     return 0;
 }*/
 
-/*Q.WAP in C that prints the ASCII values of all characters (A–Z, a–z, 0–9).
-#include <stdio.h>
+/*--------- Program to print all the ASCII values of all characters (A–Z, a–z, 0–9). ---------*/
+
+/*#include <stdio.h>
 int main() {
     char ch;
     printf("Uppercase Letters (A-Z):\n");
@@ -169,7 +195,9 @@ int main() {
     return 0;
 }*/
 
-/*#include<stdio.h>   //Q.6
+/*--------- PROGRAM 6: Find greatest of four numbers ---------*/
+
+/*#include<stdio.h>
 int main(){
     int a,b,c,d;
     printf("Enter 4 numbers:");
@@ -188,7 +216,9 @@ int main(){
     }
     return 0;
 }
+
 //Another method
+
 #include <stdio.h>
 int main() {
     float a, b, c, d, greatest;
@@ -209,12 +239,14 @@ int main() {
     return 0;
 }*/
 
-/*Q.Write a program to find greatest of four numbers entered by the user and if 2 greatest numbers are equal mention it also.
-#include <stdio.h>
+/*--------- Find greatest of four numbers entered by the user and if 2 greatest numbers are equal mention it also. ---------*/
+
+/*#include <stdio.h>
 int main() {
     float a, b, c, d, greatest;
     printf("Enter four numbers: ");
     scanf("%f %f %f %f", &a, &b, &c, &d);
+
     // Find greatest using && conditions
     if (a >= b && a >= c && a >= d)
         greatest = a;
@@ -224,10 +256,13 @@ int main() {
         greatest = c;
     else
         greatest = d;
+
     // Print greatest value
     printf("The greatest number is: %.2f\n", greatest);
+    
     // Print which numbers are equal to the greatest
     printf("Number(s) equal to the greatest: ");
+    
     int count = 0;
 
     if (a == greatest) {
