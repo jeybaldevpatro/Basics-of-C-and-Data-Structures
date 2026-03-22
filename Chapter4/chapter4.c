@@ -1,5 +1,10 @@
-/*Quiz question.
-#include<stdio.h>
+                                /**********  LOOP CONTROL INSTRUCTION  **********/ 
+
+                                        /********** Theory **********/
+
+/*--------- Quick Quiz:  To print natural numbers from 10 to 20 when initial loop counter is initialized to 0 ---------*/
+
+/*#include<stdio.h>
 int main(){
     int i=0;
     while (i+10<21){
@@ -8,7 +13,9 @@ int main(){
     }
     return 0;
 }
+
 //Another method
+
 #include <stdio.h>
 int main(){
     int i = 0;
@@ -21,8 +28,9 @@ int main(){
     return 0;
 }*/
 
-/*Quiz question.
-#include<stdio.h>
+/*--------- Quick Quiz:  To print first ‘n’ natural numbers using for loop ---------*/
+
+/*#include<stdio.h>
 int main(){
     int i=1,n;
     printf("enter no.:");
@@ -34,19 +42,21 @@ int main(){
     return 0;
 }*/
 
-/*quiz question
-#include<stdio.h>
+/*--------- Quick Quiz:  To print first ‘n’ natural numbers using for loop ---------*/
+
+/*#include<stdio.h>
 int main(){
-    int i,n;   //either mention int i here or in loop.
+    int n;   //either mention int i here or in loop.
     printf("Enter a number:");
     scanf("%d",&n);
-    for (int i=1;i<=n;i++) // no need to mention int before i since we already mentioned it. if u did then there is no problem
-        printf("%d\n",i);  
+    for (int i=1;i<=n;i++)
+        printf("%d\n",i);
     return 0;
-}*/
+}/*
 
-/*Quiz question.reverse order of natural no.
-#include <stdio.h>
+/*--------- Quick Quiz:  To print ‘n’ natural numbers in reverse order.  ---------*/
+
+/*#include <stdio.h>
 int main(){
     int n;
     printf("Enter a number:");
@@ -56,7 +66,9 @@ int main(){
     }
     return 0;
 }*/
-/*another method
+
+/*Another method
+
 #include <stdio.h>
 int main(){
     int n;
@@ -67,8 +79,10 @@ int main(){
     }
     return 0;
 }*/
-/*Reverse order of whole no.
-#include <stdio.h>
+
+//Q. Reverse order of whole no.
+
+/*#include <stdio.h>
 int main(){
     int n;
     printf("Enter a number:");
