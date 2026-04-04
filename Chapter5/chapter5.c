@@ -1,3 +1,7 @@
+                                /**********  FUNCTIONS AND RECURSION  **********/
+
+                                        /********** Theory **********/
+
 /*#include <stdio.h>
 
 // Function prototype
@@ -36,8 +40,13 @@ int main(){
     return 0;
 }*/
 
-/*Quick Quiz
-#include <stdio.h>
+/*--------- Quick Quiz:  Write a program with three functions 
+                         1. Good morning function which prints “good morning”. 
+                         2. Good afternoon function which prints “good afternoon”. 
+                         3. Good night function which prints “good night”. 
+                            main() should call all of these in order 1→2→3 ---------*/
+
+/*#include <stdio.h>
 void goodmorning();
 void goodevening();
 void goodnight();
@@ -58,8 +67,9 @@ int main(){
     return 0;
 }*/
 
-/*Quick Quiz
-#include<stdio.h>
+/*--------- Quick Quiz:  Use the library function to calculate the area of a square with side a  ---------*/
+
+/*#include<stdio.h>
 #include<math.h>
 int main(){
     int a;
@@ -69,8 +79,9 @@ int main(){
     return 0;
 }*/
 
-/*#include <stdio.h>
+//RECURSION
 
+/*#include <stdio.h>
 int factorial(int);
     // Factorial(5) = 1 X 2 X 3 X 4 X 5
     // Factorial(4) = 1 X 2 X 3 X 4
@@ -80,7 +91,7 @@ int factorial(int);
 
 int factorial(int n){
                 //return 1,2...any no.; then it will show that no. in terminal bcoz it will not see furthur code. so output will be "The factorial of 6 is 4"
-                //but why in int main, (return statement) if i write anything other than 0 then the program still executes?
+                //but why in int main, (return statement) if i write anything other than 0 then the program still executes? Ans: main() returns value to operating system, not to our program
     if(n == 1 || n == 0){ // Base condition. if we do not use this then program crashes with a stack overflow.Infinite recursion
         return 1;
     }
@@ -93,7 +104,9 @@ int main(){                     //So your output matches accidentally.
     printf("The factorial of %d is %d", a, factorial(a));
     return 0;
 }*/
+
 // OR
+
 /*#include <stdio.h>
 int Factorial(int n);
 
@@ -112,6 +125,8 @@ int Factorial(int n){
     }
     return fact;
 }*/
+
+//Self practice
 
 /*Q.Write a function to calculate the sum of first ‘n’ natural numbers.(with and without recursion)
 Q.Write a function to calculate the factorial of given numbers/'n' no.s.(with and without recursion)
