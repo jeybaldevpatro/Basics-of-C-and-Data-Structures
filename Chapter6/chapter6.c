@@ -1,10 +1,16 @@
+                           /**********  POINTERS  **********/     
+
+                             /********** Theory **********/
+
 /*#include <stdio.h>
 int main(){
     int i = 72;
     printf("The address of i is %p\n", &i);
     return 0;
 }
+
 // OR. Both are same but the bottom code gives different answer.Why? ask chatgpt
+
 #include <stdio.h>
 int main(){
     int i = 72;
@@ -30,7 +36,8 @@ int main(){
     return 0;
 }*/
 
-// Types of pointers
+// TYPES OF POINTERS
+
 /*#include <stdio.h>
 
 int main(){
@@ -43,7 +50,7 @@ int main(){
     printf("The address of i is %p\n", j);
     printf("The address of k is %p\n", &k); //why address of k decreased by 7?
 
-    printf("The value at address j is %d\n", *(&i)); //did it print ascii code?Yes
+    printf("The value at address j is %d\n", *(&i)); //Did it print ascii code?Yes. Prints ASCII value because char is promoted to int in printf.
     printf("The value at address k is %.3f\n", *(&k));
 
     return 0;
@@ -78,8 +85,9 @@ int main(){
 }*/
 
 
-/*call by value
-#include <stdio.h>
+//CAll BY VALUE
+
+/*#include <stdio.h>
 int sum(int, int);
 
 int sum(int a, int b){
@@ -94,8 +102,9 @@ int main(){
     return 0;
 }*/
 
-/*call by reference
-#include <stdio.h>
+//CALL BY REFERENCE
+
+/*#include <stdio.h>
 int sum(int *, int *);
 
 // Sum should change the value of x
@@ -111,7 +120,7 @@ int main(){
     return 0;
 }*/
 
-/*how to swap values in variables. V.V.Imp
+/*How to swap values in variables. V.V.Imp
 #include <stdio.h>
 
 void swap(int* a, int* b);
